@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <!-- Website made completely by MistaFeast on GitHub -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="MistaFeast" />
+    <meta
+      name="description"
+      content="Swiftly edit your clicker heroes save to unlock ultimate power!"
+    />
+    <meta
+      name="keywords"
+      content="Clicker Heroes, CH, Cheats, Save, Editor, Saves, Hacks, Gold, Souls, Ancient, Transcend, Free"
+    />
+    <meta
+      property="og:description"
+      content="Swiftly edit your clicker heroes save to unlock ultimate power!"
+    />
+    <meta
+      property="og:image"
+      content="https://mistafeast.github.io/clicker-heroes/imgs/finky.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="1000" />
+    <meta property="og:site_name" content="Clicker Heroes - Save Editor" />
+    <meta property="og:title" content="CH - Save Editor" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://mistafeast.github.io/clicker-heroes"
+    />
+    <title>CH - Save Editor</title>
+    <link rel="icon" href="./imgs/finky.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <script src="./js/libraries/jquery.js" type="text/javascript"></script>
+    <script src="./js/libraries/crypto.js" type="text/javascript"></script>
+    <script src="./js/libraries/pako.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <img src="./imgs/github-logo.jpg" />
+      <p>Clicker Heroes Save Editor</p>
+    </header>
+    <main>
+      <div class="container">
+        <div class="title">Input</div>
+        <textarea id="input" spellcheck="false"></textarea>
+        <button id="decode">Decode</button>
+        <button class="interactive" id="paste">Paste</button>
+      </div>
+      <div class="container">
+        <div class="title">Edit</div>
+        <div class="input">
+          <label>Gold</label><br />
+          <input type="text" id="gold" placeholder="0" spellcheck="false" />
+        </div>
+        <div class="input">
+          <label>Hero Souls</label><br />
+          <input type="text" id="hero" placeholder="0" spellcheck="false" />
+        </div>
+        <div class="input">
+          <label>Rubies</label><br />
+          <input type="text" id="rubies" placeholder="0" spellcheck="false" />
+        </div>
+        <div class="input">
+          <label>Ancient Souls</label><br />
+          <input type="text" id="ancient" placeholder="0" spellcheck="false" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="title">Output</div>
+        <textarea id="output" spellcheck="false"></textarea>
+        <button id="encode">Encode</button>
+        <button class="interactive" id="copy">Copy</button>
+      </div>
+    </main>
+    <script src="./js/encrypt.js" type="text/javascript"></script>
+    <script src="./js/decrypt.js" type="text/javascript"></script>
+    <script src="./js/buttons.js" type="text/javascript"></script>
+  </body>
+</html>

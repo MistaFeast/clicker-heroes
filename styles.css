@@ -1,0 +1,224 @@
+/* 
+   ----------------------------------------------------------------------------
+   CSS Styles for MistaFeast - © 2023 MistaFeast
+   ----------------------------------------------------------------------------
+*/
+
+:root {
+  --primary-color: #fff; /* Primary background color */
+  --secondary-color: #dce4ec; /* Secondary background color */
+  --tertiary-color: #bec7d0; /* Tertiary border color */
+  --primary-button-color: #18bc9c; /* Primary button color */
+  --secondary-button-color: #107e68; /* Secondary button color */
+  --primary-interactive-color: #f39c12; /* Primary interactive color */
+  --secondary-interactive-color: #c68721; /* Secondary interactive color */
+  --font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode",
+    "Lucida Sans", sans-serif; /* Font family */
+}
+
+/* Reset some default styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles for the entire page */
+body {
+  background-color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: bold;
+  overflow: hidden;
+}
+
+/* Styles for the header section */
+header {
+  background-color: var(--secondary-color);
+  border-color: var(--tertiary-color);
+  border-style: solid;
+  border-width: 5px;
+  font-size: 30px;
+  height: 80px;
+  padding: 20px 60px;
+  text-align: center;
+}
+
+/* Styles for the header image and text */
+header img {
+  cursor: pointer;
+  float: left;
+  height: 80px;
+}
+
+header p {
+  margin-top: 20px;
+}
+
+/* Styles for the main content section */
+main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Styles for containers */
+.container {
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-color: var(--tertiary-color);
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  margin-top: 10px;
+  width: 25%;
+}
+
+/* Additional container styles */
+.container + .container {
+  margin-left: 25px;
+}
+
+.container .title {
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Label style */
+label {
+  font-size: 20px;
+}
+
+/* Input field styles */
+.input input {
+  background-color: var(--primary-color);
+  border-color: var(--tertiary-color);
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 5px;
+  height: 50%;
+  margin-bottom: 20px;
+  padding: 2px;
+  width: 100%;
+}
+
+.input input:focus {
+  outline: none;
+}
+
+/* Textarea styles */
+.container textarea {
+  background-color: var(--primary-color);
+  border-color: var(--tertiary-color);
+  border-radius: 12px;
+  border-style: solid;
+  border-width: 5px;
+  font-family: var(--font-family);
+  font-size: 18px;
+  height: 100%;
+  margin-bottom: 10px;
+  padding: 2px;
+  resize: none;
+  width: 90%;
+}
+
+.container textarea:focus {
+  outline: none;
+}
+
+/* Button styles */
+.container button {
+  background-color: var(--primary-button-color);
+  border-color: var(--secondary-button-color);
+  border-radius: 12px;
+  border-style: solid;
+  border-width: 5px;
+  font-family: var(--font-family);
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.container button:hover {
+  animation: darken 0.3s forwards;
+  cursor: pointer;
+}
+
+.container button.interactive {
+  background-color: var(--primary-interactive-color);
+  border-color: var(--secondary-interactive-color);
+}
+
+.container button.interactive:hover {
+  animation: darkenInteractive 0.3s forwards;
+  cursor: pointer;
+}
+
+/* Button animations */
+@keyframes darken {
+  0% {
+    background-color: var(
+      --primary-button-color
+    ); /* Initial background color */
+  }
+  100% {
+    background-color: #15a085; /* Darkened background color */
+  }
+}
+
+@keyframes darkenInteractive {
+  0% {
+    background-color: var(
+      --primary-interactive-color
+    ); /* Initial background color */
+  }
+  100% {
+    background-color: rgb(214, 148, 42); /* Darkened background color */
+  }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 800px) {
+  body {
+    overflow: visible;
+  }
+
+  header {
+    font-size: 15px;
+  }
+
+  main {
+    flex-direction: column;
+    margin-top: 250px;
+  }
+
+  .container {
+    height: 100%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    padding: 25px;
+    width: 50%;
+  }
+
+  .container + .container {
+    margin-left: 0;
+  }
+}
+
+/* Additional responsive design for very small screens */
+@media (max-width: 280px) {
+  header img {
+    display: none;
+  }
+}
+
+/* Random small screne bug with the GUI */
+@media (max-height: 670px) {
+  main {
+    height: 105vh;
+  }
+}
